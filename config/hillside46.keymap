@@ -13,7 +13,7 @@
 
 
 #define DEFAULT 0
-#define NUM	1
+#define NUM		1
 #define SIGN	2
 #define MOVE	3
 
@@ -51,6 +51,8 @@
 	&kp LCTRL &gqt LSHIFT A &kp S &kp D &kp F &kp G                                    &kp H      &kp J  &kp K     &kp L   &gqt RSHIFT SEMI &gqt RCTRL SQT
 	&kp LSHFT &gqt LALT Z &kp X &kp C &kp V &kp B &none                      &none     &kp N      &kp M  &kp COMMA &kp DOT &gqt RALT FSLH &kp RSHIFT
                          &mo 3 &kp LGUI &kp SPACE &kp SPACE          &kp C_VOL_DN &kp ENTER &lt 1 RGUI &mo 2
+			>;
+		};
 
 		num_layer {
 // NUM	1
@@ -91,7 +93,7 @@
 //                            |       |     |     |    BT 0  |         |        |         |      |       |
 			bindings = <
         &bt BT_CLR &kp Q &kp W &none  &kp R &kp T                        &kp Y &kp U  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
-	&kp LCTRL &kp A &none &none &none &kp G   &mwh MOVE_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
+	&kp LCTRL &kp A &none &none &none &kp G   &none   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
 	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                              &kp LCLK &none &none &none &kp DOT &kp FSLH &kp RSHIFT
 	                       &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &trans  &mkp LCLK &mkp RCLK  &mo 4
 			>;

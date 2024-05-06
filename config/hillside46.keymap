@@ -93,7 +93,7 @@
 //                            |       |     |     |    BT 0  |         |        |         |      |       |
 			bindings = <
         &bt BT_CLR &kp Q &kp W &mmv MOVE_UP  &kp R &kp T                       &kp Y  &kp RA(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
-	&kp LCTRL &kp A &mmv MOVE_LEFT &mmv_MOVE_DOEWN &mmv MOVE_RIGHT &kp G   		&none   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
+	&kp LCTRL &kp A &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp G   		&none   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
 	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp LCLK &kp RA(F15) &none &none &kp DOT &kp FSLH &kp RSHIFT
 	                       &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &trans  &mkp LCLK &mkp RCLK  &mo 4
 			>;

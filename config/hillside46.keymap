@@ -45,12 +45,12 @@
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |  BS  |
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   none  |                      |  none   |  N   |  M    |  ,   |  .    |   /   |   \  |
-//                            | MO 3  | LGUI  |  SPACE  | SPACE |    | VOLD🔽|  ENTER  | LT 1 RGUI | MO 2   | 
+//                            | MO 3  | LGUI  |  SPACE  | VOL↓ |    | VOL↑|  ENTER  | LT 1 RGUI | MO 2   | 
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                            &kp Y      &kp U  &kp I     &kp O   &kp P            &kp BACKSPACE
 	&kp LCTRL &gqt LSHIFT A &gqt LALT S &gqt LCTRL D &gqt LGUI F &kp G                 &kp H      &gqt RGUI J  &gqt RCTRL K  &gqt RALT L   &gqt RSHIFT SEMI &gqt RCTRL SQT
 	&kp LSHFT &gqt LALT Z &kp X &kp C &kp V &kp B &none                      &none     &kp N      &kp M  &kp COMMA &kp DOT &gqt RALT FSLH &gqt RSHIFT BACKSLASH
-                         &mo 3 &kp LGUI &kp SPACE &kp SPACE          &kp C_VOL_DN &kp ENTER &lt 1 RGUI &mo 2
+                         &mo 3 &kp LGUI &kp SPACE &kp F11          &kp F12 /&kp ENTER &lt 1 RGUI &mo 2
 			>;
 		};
 
@@ -92,9 +92,9 @@
 // |       |     |     |      |      |      |  BT CLEAR |                           | L SHIFT | L SHIFT |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
 //                            |       |     |     |    BT 0  |         |        |         |      |       |
 			bindings = <
-        &bt BT_CLR &kp Q &kp W &none  &kp R &kp T                       &kp Y  &kp RA(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
-	&kp LCTRL &kp A &none 		&none &none &kp G   						&none   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp LCLK &kp RA(F15) &none &none &kp DOT &kp FSLH &kp RSHIFT
+        &bt BT_CLR &kp Q &kp W &none  &kp R &kp T                       		&kp Y  &kp RA(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
+	&kp LCTRL &kp A &none 		&none &none &kp G   						&kp H   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RA(F15) &none &kp DOT &kp FSLH &kp RSHIFT
 	                       &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &trans  &mkp LCLK &mkp RCLK  &mo 4
 			>;
 		};

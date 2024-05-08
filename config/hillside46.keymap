@@ -92,9 +92,9 @@
 // |       |     |     |      |      |      |  BT CLEAR |                           | L SHIFT | L SHIFT |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
 //                            |       |     |     |    BT 0  |         |        |         |      |       |
 			bindings = <
-        &bt BT_CLR &kp Q &kp W &none  &kp R &kp T                       		&kp Y  &kp RA(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
+        &bt BT_CLR &kp Q &kp W &none  &kp R &kp T                       		&kp Y  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
 	&kp LCTRL &kp A &none 		&none &none &kp G   						&kp H   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RA(F15) &none &kp DOT &kp FSLH &kp RSHIFT
+	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RC(F15) &none &kp DOT &kp FSLH &kp RSHIFT
 	                       &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &kp C_BRI_UP  &mkp LCLK &mkp RCLK  &mo 4
 			>;
 		};

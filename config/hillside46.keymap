@@ -17,13 +17,38 @@
 #define DEFAULT 0
 #define NUM     1
 #define SIGN    2
-#define MMOVE    3
+#define MMOVE   3
 
-// &mmv {
-//      acceleration-exponent = <2>;
-//      time-to-max-speed-ms = <250>;
-//      delay-ms = <40>;
-// };
+#define U_MOUSE_MOVE_MAX 1800                    /* <--- New max speed setting (default: 600) */
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+&mmv {
+    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <500>;
+    delay-ms = <20>;
+};
+
+#define U_MOUSE_SCROLL_MAX 25                    /* <--- New max speed setting (default: 10) */
+
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+
+&mwh {
+  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+};
 / {
     behaviors {
         gqt: global-quick-tap {
@@ -94,9 +119,9 @@
             // |       |     |     |      |      |      |  BT CLEAR |                           |     |    |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
             //                            |       |     |     |    BT 0  |         |        |         |      |       |
             bindings = <
-                &kp ESC &kp Q &kp W &none  &kp R &kp T                       		&kp Y  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
-                &kp LCTRL &kp A &none 		&none &none &kp G   						&kp H   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RC(F15) &none &kp DOT &kp FSLH &kp RSHFT
+                bt BT_CLR &kp Q &kp W &mmv MOVE_UP &kp R &kp T                     		&mwh SCROLL_UP  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
+                &kp LCTRL &kp A &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp G		&mwh SCROLL_DOWN   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
+                &kp LSHFT &kp Z &kp X &mmv MOVE_DOWN &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RC(F15) &none &kp DOT &kp FSLH &kp RSHFT
                 &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &kp C_BRI_UP  &mkp LCLK &mkp RCLK  &mo 4
             >;
         };

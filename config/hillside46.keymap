@@ -17,7 +17,7 @@
 #define DEFAULT 0
 #define NUM     1
 #define SIGN    2
-#define MOVE    3
+#define MMOVE    3
 
 // &mmv {
 //      acceleration-exponent = <2>;
@@ -87,7 +87,7 @@
         };
         
         move_layer {
-            // MOVE 3
+            // MMOVE 3
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |ESC|  Q  |  W  |  &mmv MOVE_UP   |  R   |  T   |                                          |  &mwh SCROLL_VERT(-40)  |  U  |  UP    |   [  |   ]  |  BS  |
             // |  CTRL  |  A | &mmv MOVE_LEFT | &mmv MOVE_DOWN | &mmv MOVE_RIGHT | G |             |  &mwh SCROLL_VERT(40)  |  LEFT |  DOWN  | RIGHT |   ;   |   '  |

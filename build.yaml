@@ -11,7 +11,6 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
----
 include:
   # Hillside 46
   #   Comment out below if you do not have this board, to save build time
@@ -19,6 +18,5 @@ include:
     shield: hillside46_left
   - board: nice_nano_v2
     shield: hillside46_right
-  # For Reset
-  # - board: nice_nano_v2
-  #   shield: settings_reset
+   - board: nice_nano_v2
+     shield: settings_reset

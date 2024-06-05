@@ -119,7 +119,7 @@
             // |       |     |     |      |      |      |  BT CLEAR |                           |     |    |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
             //                            |       |     |     |    BT 0  |         |        |         |      |       |
             bindings = <
-                bt BT_CLR &kp Q &kp W &mmv MOVE_UP &kp R &kp T                     		&mwh SCROLL_UP  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
+                &bt BT_CLR &kp Q &kp W &mmv MOVE_UP &kp R &kp T                     		&mwh SCROLL_UP  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
                 &kp LCTRL &kp A &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp G		&mwh SCROLL_DOWN   &kp LEFT  &kp DOWN  &kp RIGHT   &kp SEMI &kp SQT
                 &kp LSHFT &kp Z &kp X &mmv MOVE_DOWN &kp V &kp B &bt BT_CLR                  &mkp MCLK &kp N &kp RC(F15) &none &kp DOT &kp FSLH &kp RSHFT
                 &mo 3 &kp LGUI   &kp SPACE  &bt BT_SEL 0      &kp C_BRI_UP  &mkp LCLK &mkp RCLK  &mo 4

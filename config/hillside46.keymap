@@ -49,6 +49,7 @@
 &mwh {
   time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
+
 / {
     behaviors {
         gqt: global-quick-tap {
@@ -111,12 +112,12 @@
             >;
         };
         
-        move_layer {
+        mmove_layer {
             // MMOVE 3
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |ESC|  Q  |  W  |  &mmv MOVE_UP   |  R   |  T   |                                          |  &mwh SCROLL_VERT(-40)  |  U  |  UP    |   [  |   ]  |  BS  |
             // |  CTRL  |  A | &mmv MOVE_LEFT | &mmv MOVE_DOWN | &mmv MOVE_RIGHT | G |             |  &mwh SCROLL_VERT(40)  |  LEFT |  DOWN  | RIGHT |   ;   |   '  |
-            // |       |     |     |      |      |      |  BT CLEAR |                           |     |    |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
+            // |   LSHIFT  |  Z   |  X   |  C    |      |      |  BT CLEAR |                           |     |    |  N   |  &mmv MOVE_LEFT | &mmv MOVE_RIGHT |  .   |   /   | CTRL |
             //                            |       |     |     |    BT 0  |         |        |         |      |       |
             bindings = <
                 &bt BT_CLR &kp Q &kp W &mmv MOVE_UP &kp R &kp T                     		&mwh SCROLL_UP  &kp RC(F16)  &kp UP     &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp BACKSPACE
